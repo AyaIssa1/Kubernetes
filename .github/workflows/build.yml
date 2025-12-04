@@ -19,7 +19,7 @@ jobs:
 
       - name: Build JAR
         working-directory: ./src/api
-        run: mvn clean package -DskipTests
+        run: mvn clean package -DskipTests -DargLine="--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED"
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
