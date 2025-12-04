@@ -27,10 +27,10 @@ jobs:
 
       - name: Build Docker image
         working-directory: ./src/api
-        run: docker build -t ghcr.io/${{ github.actor }}/todo-app:${{ github.sha }} .
+        run: docker build -t ghcr.io/${{ github.actor,, }}/todo-app:${{ github.sha }} .
 
       - name: Login GHCR
-        run: echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+        run: echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u ${{ github.actor,, }} --password-stdin
 
       - name: Push Image
-        run: docker push ghcr.io/${{ github.actor }}/todo-app:${{ github.sha }}
+        run: docker push ghcr.io/${{ github.actor,, }}/todo-app:${{ github.sha }}
