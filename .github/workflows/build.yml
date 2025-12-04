@@ -21,14 +21,14 @@ jobs:
           java-version: '17'
 
       - name: Build JAR
-        working-directory: ./api
+        working-directory: ./src/api
         run: mvn clean package -DskipTests
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
       - name: Build Docker image
-        working-directory: ./api
+        working-directory: ./src/api
         run: docker build -t ghcr.io/${{ github.actor }}/todo-app:${{ github.sha }} .
 
       - name: Login GHCR
