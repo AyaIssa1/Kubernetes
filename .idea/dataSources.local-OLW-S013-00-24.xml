@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="IU-243.21565.193">
+    <data-source name="todo@localhost" uuid="956a9653-9730-43d4-a802-037e0b2fd2c8">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MARIADB" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="todo@mariadb-service" uuid="05dc2ad4-ee7d-45d8-b68f-607d55e16e64">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MARIADB" />
+      <user-name>root</user-name>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>
