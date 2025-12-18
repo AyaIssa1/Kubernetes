@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 // Registered as a Spring Service (Component)
 @Service
 public class TaskService {
-    
+
     // Automatically instantiate (via Spring IoC) 
     @Autowired
     private TaskRepository repository;
