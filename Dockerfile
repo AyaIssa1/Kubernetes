@@ -22,7 +22,7 @@ WORKDIR /app
 EXPOSE 8080
 
 # Copier le fichier JAR depuis le build Maven
-COPY --from=build /build/target/*.jar /app/app.jar  # Ici, on copie directement vers /app/app.jar
+COPY --from=build /build/target/*.jar /app/app.jar
 
 # Exécution de l'application Java
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
